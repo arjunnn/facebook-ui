@@ -1,0 +1,5 @@
+include mixins/_ticker_post.pug
+
+div.ticker
+  each post in posts
+    +tickerCard(post)

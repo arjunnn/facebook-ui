@@ -1,0 +1,31 @@
+mixin postCard(post = {})
+
+  div.post__card
+    a(href="#")
+      div.caret
+    div.post__header
+      a(href="#")
+        img(src=`${post.posterImage || "https://randomuser.me/api/portraits/thumb/men/95.jpg"}` alt=`${post.poster}'s photo`)
+      div.post__details
+        a(href="#")
+          span.post__name #{post.poster}
+          br
+        span
+          a(href="#")
+            span.post__timestamp #{post.time}
+          a(href="#")
+            span.post__audience #{post.audience}
+    div.post__content
+      p #{post.content}
+    hr
+    div.post__actions
+      a(href="#")
+        span.action__like Like
+      a(href="#")
+        span.action__comment Comment
+      a(href="#")
+        span.action__share Share
+
+  div.post__reactions
+    a(href="#")
+      span #{post.likers[0]}, #{post.likers[1]} and 10 others

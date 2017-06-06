@@ -1,0 +1,6 @@
+mixin friendCard(friend = {})
+  //- -console.log(friend)
+  div.friend
+    img(src=`${friend.picture.thumbnail || "https://randomuser.me/api/portraits/thumb/men/33.jpg"}`)
+    span.friend__name #{friend.name.first || "John"} #{friend.name.last} 
+    span.availability

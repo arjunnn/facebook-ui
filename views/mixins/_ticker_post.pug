@@ -1,0 +1,7 @@
+mixin tickerCard(activity = {})
+
+  div.ticker__post
+    img(src=`${activity.photo || "https://randomuser.me/api/portraits/thumb/men/33.jpg"}`)
+    span
+      b #{activity.name || "John Doe"} 
+      o liked Jane Appleseed's photo

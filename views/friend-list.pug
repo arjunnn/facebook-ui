@@ -1,0 +1,6 @@
+include mixins/_friend-list_friend.pug
+
+div.friend-list
+  each friend in friends
+    //- -console.log(friend)
+    +friendCard(friend)
